@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="weather-effects" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <h1>Weather Dashboard</h1>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter a city, e.g. Mumbai">
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="message" aria-live="polite"></p>
+
+        <section id="weather" class="weather-grid"></section>
+
+        <section class="map-section">
+            <h2>City Location & Current Weather</h2>
+            <p id="map-caption">Search for a city to see its location and weather.</p>
+            <div id="map"></div>
+        </section>
+
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast" class="forecast-grid"></div>
+        </section>
+
+        <section class="recent-section">
+            <h2>Recent Searches</h2>
+            <div id="recent-searches" class="recent-searches"></div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
